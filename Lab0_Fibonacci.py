@@ -57,29 +57,44 @@ if __name__ == '__main__':
                 # MATLab which I will look up later if that same function 
                 # exists in Python
                     if (idx == 0):
+                        # If the index is 0, the Fibonacci value is zero
                         print('\nYour Fibonacci number is 0.')
                         break
                     elif (idx == 1):
+                        # If the index is 1, the Fibonacci value is one
                         print('\nYour Fibonacci number is 1.')
                         break
                     else:
                         n = n_previous1 + n_previous2
+                        # This is the equation to find the Fibonacci value at 
+                        # any index above 1. It is the sum of the two 
+                        # preceding Fibonacci values.
                         
                         n_previous1 = n_previous2
                         n_previous2 = n
+                        # These are to take notes on the previous two 
+                        # Fibonacci values. They change every loop through
+                        # the code                        
                         
                         j = j + 1
+                        # This is a placeholder for the loop. 
                 else:
                     break
         elif (user_input == 'n'):
             print('\nMaybe some other time...')
+            # If the user does not want to find a Fibonacci number, then this
+            # message is displayed and the code ends
             break
         else:
             user_input = input('Invalid Input. Would you still like to '
                                'find a Fibonacci Number? (y)es or (n)o: ')
+            # This will prompt the user if they want to try to enter a correct
+            # indexing value
             continue
             
         print('\nThe Fibonacci Number at index {:} is {:}.'.format(idx,n))
+        # This message displays the index the user entered and the Fibonacci 
+        # value corresponding to that index.
     
         user_input = input('Would you like to find another Fibonacci Number? '
                    '(y)es or (n)o: ')
